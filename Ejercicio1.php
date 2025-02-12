@@ -18,7 +18,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $sql = "INSERT INTO category (name) VALUES ('$nombre')";
 
         $stmt = $conn->prepare($sql);
-        $stmt->execute(["nombre" => $nombre]);
+        $stmt->execute();
         echo "agregado correctamente";
     }
 
